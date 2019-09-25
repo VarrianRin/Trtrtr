@@ -5,17 +5,6 @@
 #include <sys\stat.h>
 #include <ctype.h>
 
-//calloc
-//везде assert
-
-/*#define MEOW!
-
-#ifdef MEOW
-#define  ASSERT(x)
-#else
-#define  ASSERT(x) assert(x);
-#endif */
-
 //! struct _stat buff\n
 //! needs to be for _stat
 
