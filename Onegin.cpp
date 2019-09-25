@@ -38,10 +38,8 @@ int writer (const char* file, const struct data Data[], int NLines) {
     for (; line < NLines; line++) {
 
         if (Data[line].size > 1) {
-            printf("line = %d\n", line);
             fprintf(EmptyFile, (const char*) Data[line].index);
             fprintf(EmptyFile, "\n");
-            printf("'%s'\n length = %d\n", Data[line].index, Data[line].size);
         }
     }
 
@@ -50,6 +48,7 @@ int writer (const char* file, const struct data Data[], int NLines) {
     }
 
 //! WinReader\n
+//! reads file to text
 //! only for Windows files
 //! @param [in]  file - pointer to file
 //! @param [out] text (calloc) - pointer to text read
@@ -105,37 +104,6 @@ int WinTextSorter1 (char* text) {
     }
 
     Data[line - 1].size = Data[0].index + buff.st_size - Data[line - 1].index;
-
-    return line;
-}
-
-//! WinTextSorter2\n
-//! Deletes lines without letters\n
-//! Only for Windows files\n
-//! @param [in]  Data - struct data with pointers to lines
-//! @param [in]  text - pointer to text
-//! @param [out] line - number of strings sorted
-
-int WinTextSorter2 (struct data Data[], char* text) {
-
-
-    int line = 1;
-
-    Data[0].index = text;
-
-    for ( ; (text = strchr(text + 1, '\n')) != '\0'; line++) {
-
-        *text = '\0';
-
-        if (*(text + 2) == '\n') {
-            text += 2;
-            line--;
-            continue;
-        }
-        *(text - 1) = '\n';
-
-        Data[line].index = (text + 1);
-    }
 
     return line;
 }
