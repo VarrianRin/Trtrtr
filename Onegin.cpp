@@ -104,6 +104,7 @@ char* WinReader (const char* FileName, int SizeFile) {//sizefile
 //! Only for Windows files\n
 //! @param [in]  text - pointer to text
 //! @param [in]  SizeFile - size of the file
+//! @param [in] Lines - strust data with pointers to lines an their sizes
 //! @param [out] line - number of lines sorted
 
 int WinTextParser (char* text, int SizeFile, struct data* Lines) {
