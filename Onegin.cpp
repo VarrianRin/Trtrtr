@@ -5,19 +5,6 @@
 #include <sys\stat.h>
 #include <ctype.h>
 
-//calloc!!!
-//везде assert!!!
-//нет глобальных переменных!!!
-//функции!!!
-
-/*#define MEOW!
-
-#ifdef MEOW
-#define  ASSERT(x)
-#else
-#define  ASSERT(x) assert(x);
-#endif */
-
 //! struct data\n
 //! @param  char* index - pointers to lines
 //! @param  int size - size of lines
