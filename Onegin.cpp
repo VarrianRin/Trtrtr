@@ -5,19 +5,6 @@
 #include <sys\stat.h>
 #include <ctype.h>
 
-//calloc!!!
-//везде assert!!!
-//нет глобальных переменных!!!
-//функции!!!
-
-/*#define MEOW!
-
-#ifdef MEOW
-#define  ASSERT(x)
-#else
-#define  ASSERT(x) assert(x);
-#endif */
-
 //! struct data\n
 //! @param  char* index - pointers to lines
 //! @param  int size - size of lines
@@ -49,7 +36,7 @@ int StringWriter (const char* FileName, const char* text, int count, const char*
     for ( ; n_symbol < count; n_symbol++) {
         fputc( text[n_symbol], File);
         if (text[n_symbol] == '\0') {
-            fputc( '\n', File);
+            fputc('\n', File);
             n_symbol++;
         }
     }
@@ -116,7 +103,6 @@ char* WinReader (const char* FileName, int SizeFile) {//sizefile
 }
 
 //! WinTextParser\n
-//! Doesn't delete lines\n
 //! Only for Windows files\n
 //! @param [in]  text - pointer to text
 //! @param [in]  SizeFile - size of the file
@@ -281,7 +267,7 @@ void StructNULLCheck(struct data* Lines, int NLines) {
 //! main\n
 //! @param Onegin - Onegin
 //! @param InputFile - file to write in
-//! @param SizeFile - size of onegin
+//! @param SizeFile - size of Onegin
 //! @param Lines - struct data with pointers to lines and sizes of them
 //! @param NLines - number of lines in file
 //! @param text - pointer to text from file
