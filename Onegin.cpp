@@ -5,8 +5,6 @@
 #include <sys\stat.h>
 #include <ctype.h>
 
-#define StringWriter fack
-
 //! struct data\n
 //! @param  char* index - pointers to lines
 //! @param  int size - size of lines
